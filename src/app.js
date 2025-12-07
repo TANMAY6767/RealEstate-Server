@@ -7,19 +7,18 @@ import userRouter from "./controllers/user_management/user_managementRoute.js";
 import tenantQRoute from "./controllers/tenantq/tenantQRoute.js";
 import rentRouter from "./controllers/rentCollection/rentCollectionRoutes.js";
 import { verifyJWT } from "./middlewares/auth.middleware.js";
-import propertyRouter from "./controllers/property/PropertyRouter.js.js"
+import propertyRouter from "./controllers/property/PropertyRouter.js.js";
 import taskRoutes from "./controllers/task/taskRoutes.js";
 import notificationRouter from "./controllers/notifications/notificationRoute.js";
-import dashboardRouter from "./controllers/dashboard/dashboardRoutes.js"
+import dashboardRouter from "./controllers/dashboard/dashboardRoutes.js";
 const app = express();
 
 app.use(
     cors({
         origin: [
             "http://localhost:3000",
-            "https://staging.redapplecars.com",
-            "http://localhost:3001",
-            "https://staging-bs.redapplecars.com"
+            "https://real-estate-staff-dashboard.vercel.app",
+            "http://localhost:3001"
         ],
         credentials: true
     })
